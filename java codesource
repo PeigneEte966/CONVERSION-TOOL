@@ -1,0 +1,769 @@
+package Test2;
+
+import java.util.Scanner;
+
+public class Conversion2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double distancea , distancec;
+		double massea , massec;
+		double montanta,montantc;
+		int choix, mode;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("OUTIL DE CONVERSION DE DISTANCES, DE MASSES ET DE DEVISES");
+		System.out.println("-------------------------------------");
+		System.out.println("voulez-vous convertir une masse, une distance ou une devise ?");
+		System.out.println();
+		do {
+		System.out.println("1 - UNE MASSE");
+		System.out.println();
+		System.out.println("2 - UNE DISTANCE");
+		System.out.println();
+		System.out.println("3 - UNE DEVISE");
+		System.out.println();
+		System.out.print("VOTRE CHOIX EST :");
+		choix = sc.nextInt();
+        System.out.println();		
+		}while(choix != 1 && choix != 2 && choix !=3);
+		if(choix == 1 ) {
+			System.out.println("CHOISISEZ LE MODE DE CONVERSION DE LA MASSE :");
+			System.out.println("1 - KILOGRAMME => GRAMME");
+			System.out.println("2 - GRAMME => KILOGRAMME");
+			System.out.println("3 - KILOGRAMME => MILLIGRAMME");
+			System.out.println("4 - MILLIGRAMME => KILOGRAMME");
+			System.out.println("5 - GRAMME => MILLIGRAMME");
+			System.out.println("6 - MILLIGRAMME => GRAMME");
+			System.out.println("7 - TONNE => KILOGRAMME");
+			System.out.println("8 - KILOGRAMME => TONNE");
+			System.out.println("9 - TONNE => GRAMME");
+			System.out.println("10 - GRAMME => TONNE");
+			System.out.println("11 - TONNE => MILLIGRAMME");
+			System.out.println("12 - MILLIGRAMME => TONNE");
+			System.out.println("13 - OUNCE => TONNE");
+			System.out.println("14 - TONNE => OUNCE");
+			System.out.println("15 - OUNCE => KILOGRAMME");
+			System.out.println("16 - KILOGRAMME => OUNCE");
+			System.out.println("17 - OUNCE => GRAMME");
+			System.out.println("18 - GRAMME => OUNCE");
+			System.out.println("19 - MILLIGRAMME => OUNCE");
+			System.out.println("20 - OUNCE => MILLIGRAMME");
+			System.out.println("21 - CARAT => TONNE");
+			System.out.println("22 - TONNE => CARAT");
+			System.out.println("23 - CARAT => KILOGRAMME");
+			System.out.println("24 - KILOGRAMME => CARAT");
+			System.out.println("25 - CARAT => GRAMME");
+			System.out.println("26 - GRAMME => CARAT");
+			System.out.println("27 - CARAT => MILLIGRAMME");
+			System.out.println("28 - MILLIGRAMME => CARAT");
+			System.out.println("29 - CARAT => OUNCE");
+			System.out.println("30 - OUNCE => CARAT");
+			System.out.println();
+			System.out.print("VOTRE CHOIX EST : ");
+			mode = sc.nextInt();
+			System.out.println("QUELLE EST LA MASSE A CONVERTIR ?");
+			System.out.print("LA MASSE A CONVERTIR EST :");
+			massea = sc.nextDouble();
+			
+			switch(mode) {
+			
+			case 1 : //kg => g
+				massec = massea * 1000;
+				System.out.println();
+				System.out.println(massea+" kilogramme correspond à"+massec+" gramme");
+				break;
+				
+			case 2 : //g => kg
+				massec = massea / 1000;
+				System.out.println();
+				System.out.println(massea+" gramme correspond à"+massec+" kilogramme");
+				break;
+				
+			case 3 : //kg => mg
+				massec = massea * 1000000;
+				System.out.println();
+				System.out.println(massea+" kilogramme correspond à"+massec+" milligramme");
+				break;
+				
+			case 4 : //mg => kg
+				massec = massea / 1000000;
+				System.out.println();
+				System.out.println(massea+" milligramme correspond à"+massec+" kilogramme");
+				break;
+				
+			case 5 : //g => mg
+				massec = massea * 1000;
+				System.out.println();
+				System.out.println(massea+" gramme correspond à"+massec+" milligramme");
+				break;
+				
+			case 6 : //mg => g
+				massec = massea / 1000;
+				System.out.println();
+				System.out.println(massea+" milligramme correspond à"+massec+" gramme");
+				break;
+				
+			case 7 : //t => kg
+				massec = massea * 1000;
+				System.out.println();
+				System.out.println(massea+" tonne correspond à"+massec+" kilogramme");
+				break;
+				
+			case 8 : //kg => t
+				massec = massea / 1000;
+				System.out.println();
+				System.out.println(massea+" kilogramme correspond à"+massec+" tonne");
+				break;
+				
+			case 9 : //t => g
+				massec = massea * 1000000;
+				System.out.println();
+				System.out.println(massea+" tonne correspond à"+massec+" gramme");
+				break;
+				
+			case 10 : //g => t
+				massec = massea / 1000000;
+				System.out.println();
+				System.out.println(massea+" gramme correspond à"+massec+" tonne");
+				break;
+				
+			case 11 : //t => mg
+				massec = massea * 1000000000;
+				System.out.println();
+				System.out.println(massea+" tonne correspond à"+massec+" milligramme");
+				break;
+				
+			case 12 : //mg => t
+				massec = massea / 1000000000;
+				System.out.println();
+				System.out.println(massea+" milligramme correspond à"+massec+" tonne");
+				break;
+				
+			case 13 : //oz => t
+				massec = massea / 35273.96194958;
+				System.out.println();
+				System.out.println(massea+" ounce correspond à"+massec+" tonne");
+				break;
+				
+			case 14 : //t => oz
+				massec = massea * 35273.96194958;
+				System.out.println();
+				System.out.println(massea+" tonne correspond à"+massec+" ounce");
+				break;
+				
+			case 15 : //oz => kg
+				massec = massea / 35.27396194958;
+				System.out.println();
+				System.out.println(massea+" ounce correspond à"+massec+" kilogramme");
+				break;
+				
+			case 16 : //kg => oz
+				massec = massea * 35.27396194958;
+				System.out.println();
+				System.out.println(massea+" kilogramme correspond à"+massec+" ounce");
+				break;
+				
+			case 17 : //oz => g
+				massec = massea / 0.03527396194958;
+				System.out.println();
+				System.out.println(massea+" ounce correspond à"+massec+" gramme");			
+				break;
+				
+			case 18 : //g => oz
+				massec = massea * 0.03527396194958;
+				System.out.println();
+				System.out.println(massea+" gramme correspond à"+massec+" ounce");
+				break;
+				
+			case 20 : //oz => mg
+				massec = massea / 0.0003527396194958;
+				System.out.println();
+				System.out.println(massea+" ounce correspond à"+massec+" milligramme");
+				break; 
+				
+			case 19 : //mg => oz
+				massec = massea * 35273.96194958;
+				System.out.println();
+				System.out.println(massea+" milligramme correspond à"+massec+" ounce");
+				break;
+				
+			case 21 : //carat => t
+				massec = massea / 5000000;
+				System.out.println();
+				System.out.println(massea+" carat correspond à"+massec+" tonne");
+				break;
+				
+			case 22 : //t => carat
+				massec = massea * 5000000;
+				System.out.println();
+				System.out.println(massea+" tonne correspond à"+massec+" carat");
+				break;
+				
+			case 23 : //carat => kg
+				massec = massea / 5000;
+				System.out.println();
+				System.out.println(massea+" carat correspond à"+massec+" kilogramme");	
+				break;
+				
+			case 24	: //kg => carat
+				massec = massea * 5000;
+				System.out.println();
+				System.out.println(massea+" kilogramme correspond à"+massec+" carat");
+				break;
+				
+			case 26 : //g => carat
+				massec = massea * 5;
+				System.out.println();
+				System.out.println(massea+" gramme correspond à"+massec+" carat");
+				break;
+				
+			case 25 : //carat => g
+				massec = massea / 5;
+				System.out.println();
+				System.out.println(massea+" carat correspond à"+massec+" g");	
+				break;
+				
+			case 27 : //carat => mg
+				massec = massea / 0.005;
+				System.out.println();
+				System.out.println(massea+" carat correspond à"+massec+" milligramme");
+				break;
+				
+			case 28 : //mg => carat
+				massec = massea * 0.005;
+				System.out.println();
+				System.out.println(massea+" milligramme correspond à"+massec+" carat");
+				break;
+			case 29 : //carat => ounce
+				massec = massea / 141.747615625;
+				System.out.println();
+				System.out.println(massea+" carat correspond à"+massec+" ounce");
+				break;
+			case 30 : //ounce => carat 
+				massec = massea * 141.747615625;
+				System.out.println();
+				System.out.println(massea+" ounce correspond à"+massec+" carat");
+				break;
+			}
+		}
+		
+		
+		else if(choix == 2 ) {
+			System.out.println("CHOISISEZ LE MODE DE CONVERSION DE LA MASSE :");
+			System.out.println("1 - KILOMETRE => METRE");
+			System.out.println("2 - METRE => KILOMETRE");
+			System.out.println("3 - KILOMETRE => MILLIMETRE");
+			System.out.println("4 - MILLIMETRE => KILOMETRE");
+			System.out.println("5 - METRE => MILLIMETRE");
+			System.out.println("6 - MILLIMETRE => METRE");
+			System.out.println("7 - MILLE => KILOMETRE");
+			System.out.println("8 - KILOMETRE => MILLE");
+			System.out.println("9 - MILLE => METRE");
+			System.out.println("10 - METRE => MILLE");
+			System.out.println("11 - MILLE => MILLIMETRE");
+			System.out.println("12 - MILLIMETRE => MILLE");
+			System.out.println("13 - PIED => MILLE");
+			System.out.println("14 - MILLE => PIED");
+			System.out.println("15 - PIED => KILOMETRE");
+			System.out.println("16 - KILOMETRE => PIED");
+			System.out.println("17 - PIED => METRE");
+			System.out.println("18 - METRE => PIED");
+			System.out.println("19 - MILLIMETRE => PIED");
+			System.out.println("20 - PIED => MILLIMETRE");
+			System.out.println("21 - YARD => MILLE");
+			System.out.println("22 - MILLE => YARD");
+			System.out.println("23 - YARD => KILOMETRE");
+			System.out.println("24 - KILOMETRE => YARD");
+			System.out.println("25 - YARD => METRE");
+			System.out.println("26 - METRE => YARD");
+			System.out.println("27 - YARD => MILLIMETRE");
+			System.out.println("28 - MILLIMETRE => YARD");
+			System.out.println("29 - YARD => PIED");
+			System.out.println("30 - PIED => YARD");
+			System.out.println();
+			System.out.print("VOTRE CHOIX EST : ");
+			mode = sc.nextInt();
+			System.out.println("QUELLE EST LA DISTANCE A CONVERTIR ?");
+			System.out.print("LA DISTANCE A CONVERTIR EST :");
+			distancea = sc.nextDouble();
+			
+			switch(mode) {
+			
+			case 1 : //km => m
+				distancec = distancea * 1000;
+				System.out.println();
+				System.out.println(distancea+" kilomètre correspond à"+distancec+" mètre");
+				break;
+				
+			case 2 : //m => km
+				distancec = distancea / 1000;
+				System.out.println();
+				System.out.println(distancea+" mètre correspond à"+distancec+" kilomètre");
+				break;
+				
+			case 3 : //km => mm
+				distancec = distancea * 1000000;
+				System.out.println();
+				System.out.println(distancea+" kilomètre correspond à"+distancec+" millimètre");
+				break;
+				
+			case 4 : //mm => km
+				distancec = distancea / 1000000;
+				System.out.println();
+				System.out.println(distancea+" millimètre correspond à"+distancec+" kilomètre");
+				break;
+				
+			case 5 : //m => mm
+				distancec = distancea * 1000;
+				System.out.println();
+				System.out.println(distancea+" mètre correspond à"+distancec+" millimètre");
+				break;
+				
+			case 6 : //mm => m
+				distancec = distancea / 1000;
+				System.out.println();
+				System.out.println(distancea+" millimètre correspond à"+distancec+" mètre");
+				break;
+				
+			case 7 : //mi => km
+				distancec = distancea * 1.609344;
+				System.out.println();
+				System.out.println(distancea+" mille correspond à"+distancec+" kilomètre");
+				break;
+				
+			case 8 : //km => mi
+				distancec = distancea / 1.609344;
+				System.out.println();
+				System.out.println(distancea+" kilomètre correspond à"+distancec+" mille");
+				break;
+				
+			case 9 : //mi => m
+				distancec = distancea * 1609.344;
+				System.out.println();
+				System.out.println(distancea+" mille correspond à"+distancec+" mètre");
+				break;
+				
+			case 10 : //m => mi
+				distancec = distancea / 1609.344;
+				System.out.println();
+				System.out.println(distancea+" mètre correspond à"+distancec+" mille");
+				break;
+				
+			case 11 : //mi => mm
+				distancec = distancea * 1609344;
+				System.out.println();
+				System.out.println(distancea+" mille correspond à"+distancec+" millimètre");
+				break;
+				
+			case 12 : //mm => mi
+				distancec = distancea / 1609344;
+				System.out.println();
+				System.out.println(distancea+" millimètre correspond à"+distancec+" mille");
+				break;
+				
+			case 13 : //pied => mi
+				distancec = distancea / 5280;
+				System.out.println();
+				System.out.println(distancea+" pied correspond à"+distancec+" mille");
+				break;
+				
+			case 14 : //mi => pied
+				distancec = distancea * 5280;
+				System.out.println();
+				System.out.println(distancea+" mille correspond à"+distancec+" pied");
+				break;
+				
+			case 15 : //pied => km
+				distancec = distancea * 3280.8398950131;
+				System.out.println();
+				System.out.println(distancea+" pied correspond à"+distancec+" kilomètre");
+				break;
+				
+			case 16 : //km => pied
+				distancec = distancea / 3280.8398950131;
+				System.out.println();
+				System.out.println(distancea+" kilomètre correspond à"+distancec+" pied");
+				break;
+				
+			case 17 : //pied => m
+				distancec = distancea * 0.3048;
+				System.out.println();
+				System.out.println(distancea+" pied correspond à"+distancec+" mètre");			
+				break;
+				
+			case 18 : //m => pied
+				distancec = distancea / 0.3048;
+				System.out.println();
+				System.out.println(distancea+" metre correspond à"+distancec+" pied");
+				break;
+				
+			case 20 : //pied => mm
+				distancec = distancea * 304.8 ;
+				System.out.println();
+				System.out.println(distancea+" pied correspond à"+distancec+" millimètre");
+				break; 
+				
+			case 19 : //mm => pied
+				distancec = distancea / 304.8 ;
+				System.out.println();
+				System.out.println(distancea+" millimètre correspond à"+distancec+" pied");
+				break;
+				
+			case 21 : //yard => mille
+				distancec = distancea / 1760;
+				System.out.println();
+				System.out.println(distancea+" yard correspond à"+distancec+" mille");
+				break;
+				
+			case 22 : //mille => yard
+				distancec = distancea * 1760;
+				System.out.println();
+				System.out.println(distancea+" mille correspond à"+distancec+" yard");
+				break;
+				
+			case 23 : //yard => km
+				distancec = distancea / 1093.6132983377;
+				System.out.println();
+				System.out.println(distancea+" yard correspond à"+distancec+" kilomètre");	
+				break;
+				
+			case 24	: //km => yard
+				distancec = distancea * 1093.6132983377;
+				System.out.println();
+				System.out.println(distancea+" kilomètre correspond à"+distancec+" yard");
+				break;
+				
+			case 26 : //m => yard
+				distancec = distancea /0.914;
+				System.out.println();
+				System.out.println(distancea+" mètre correspond à"+distancec+" yard");
+				break;
+				
+			case 25 : //yard => m
+				distancec = distancea * 0.914;
+				System.out.println();
+				System.out.println(distancea+" c correspond à"+distancec+" mètre");	
+				break;
+				
+			case 27 : //yard => mm
+				distancec = distancea * 914.4;
+				System.out.println();
+				System.out.println(distancea+" yard correspond à"+distancec+" mètre");
+				break;
+				
+			case 28 : //mm => yard
+				distancec = distancea / 914.4;
+				System.out.println();
+				System.out.println(distancea+" mètre correspond à"+distancec+" yard");
+				break;
+			case 29 : //yard => pied
+				distancec = distancea * 3;
+				System.out.println();
+				System.out.println(distancea+" yard correspond à"+distancec+" pied");
+				break;
+			case 30 : //pied => yard 
+				distancec = distancea / 3;
+				System.out.println();
+				System.out.println(distancea+" pied correspond à"+distancec+" yard");
+				break;
+			}
+		}
+		
+		
+		else if(choix == 3) {
+			
+			
+			System.out.println("OUTIL DE CONVERSSION DE DEVISES :");
+			System.out.println("----------------------------------");
+			System.out.println("choisissez le mode de conversion que vous souhaitez :");
+			System.out.println();
+			System.out.println("1 - EURO (EUR) => DOLLAR AMERICAIN (USD) ");
+			System.out.println();
+			System.out.println("2 - DOLLAR AMERICAIN (USD) => EURO (EUR) ");
+			System.out.println();
+			System.out.println("3 - LIVRE BRITANNIQUE (GBP) => EURO (EUR) ");
+			System.out.println();
+			System.out.println("4 - EURO (EUR) => LIVRE BRITANNIQUE (GBP) ");
+			System.out.println();
+			System.out.println("5 - LIVRE BRITANNIQUE (GBP) => DOLLAR AMERICAIN (USD) ");
+			System.out.println();
+			System.out.println("6 - DOLLAR AMERICAIN (USD) => LIVRE BRITANNIQUE (GBP) ");
+			System.out.println();
+			System.out.println("7 - EURO (EUR) => DOLLAR CANADIEN (CAD) ");
+			System.out.println();
+			System.out.println("8 - DOLLAR AMERICAIN (USD) => DOLLAR CANADIEN (CAD) ");
+			System.out.println();
+			System.out.println("9 - LIVRE BRITANNIQUE (GBP) => DOLLAR CANADIEN (CAD) ");
+			System.out.println();
+			System.out.println("10 - DOLLAR CANADIEN (CAD) => EURO (EUR)");
+			System.out.println();
+			System.out.println("11- DOLLAR CANADIEN (CAD) => DOLLAR AMERICAIN (USD)");
+			System.out.println();
+			System.out.println("12 - DOLLAR CANADIEN (CAD) => LIVRE BRITANNIQUE (GBP)");
+			System.out.println();
+			System.out.println("13 - DOLLAR AUSTRALIEN (AUD) => EURO (EUR)");
+			System.out.println();
+			System.out.println("14 - DOLLAR AUSTRALIEN (AUD) => DOLLAR AMERICAIN (USD)");
+			System.out.println();
+			System.out.println("15 - DOLLAR AUSTRALIEN (AUD) => DOLLAR CANADIEN (CAD)");
+			System.out.println();
+			System.out.println("16 - DOLLAR AUSTRALIEN (AUD) => LIVRE BRITANNIQUE (GBP)");
+			System.out.println();
+			System.out.println("17 - EURO (EUR) => DOLLAR AUSTRALIEN (AUD)");
+			System.out.println();
+			System.out.println("18 - LIVRE BRITANNIQUE (GBP) => DOLLAR AUSTRALIEN (AUD)");
+			System.out.println();
+			System.out.println("19 - DOLLAR AMERICAIN (USD) => DOLLAR AUSTRALIEN (AUD)");
+			System.out.println();
+			System.out.println("20 - DOLLAR CANADIEN (CAD) => DOLLAR AUSTRALIEN (AUD)");
+			System.out.println();
+			System.out.println("21 - YEN JAPONAIS (JPY) => EURO (EUR)");
+			System.out.println();
+			System.out.println("22 - YEN JAPONAIS (JPY) => DOLLAR AMERICAIN (USD)");
+			System.out.println();
+			System.out.println("23 - YEN JAPONAIS (JPY) => DOLLAR CANADIEN (CAD)");
+			System.out.println();
+			System.out.println("24 - YEN JAPONAIS (JPY) => LIVRE BRITANNIQUE (GBP)");
+			System.out.println();
+			System.out.println("25 - YEN JAPONAIS (JPY) => DOLLAR AUSTRALIEN (AUD)");
+			System.out.println();
+			System.out.println("26 - EURO (EUR) => YEN JAPONAIS (JPY)");
+			System.out.println();
+			System.out.println("27 - LIVRE BRITANNIQUE (GBP) => YEN JAPONAIS (JPY)");
+			System.out.println();
+			System.out.println("28 - DOLLAR AMERICAIN (USD) => YEN JAPONAIS (JPY)");
+			System.out.println();
+			System.out.println("29 - DOLLAR CANADIEN (CAD) => YEN JAPONAIS (JPY)");
+			System.out.println();
+			System.out.println("30 - DOLLAR AUSTRALIEN (CAD) => YEN JAPONAIS (JPY)");
+			System.out.println();
+			System.out.println();
+			System.out.print("LE CHOIX EST : ");
+			mode = sc.nextInt();
+			System.out.println();
+			System.out.print("Quel est le montant à convertir : ");
+			montanta = sc.nextInt();
+			switch(mode) {
+			
+			case 1 : //EUR => USD
+				
+				montantc = 1.13791 * montanta;
+				System.out.println();
+				System.out.println(montanta+" euro correspond à "+montantc+" dollar américain");
+				break;
+				
+			case 2 : //USD => EUR
+				
+				montantc = 0.878795 * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar américain correspond à "+montantc+" euro");
+				break;
+				
+			case 3 : //GBP => EUR
+				
+				montantc = 1.11707 * montanta;
+				System.out.println();
+				System.out.println(montanta+" livre britannique correspond à "+montantc+" euro");
+				break;
+				
+			case 4 : //EUR => GBP
+				
+				montantc = 0.895195 * montanta;
+				System.out.println();
+				System.out.println(montanta+" euro correspond à "+montantc+" livre britannique");
+				break;	
+				
+			case 5 : //GBP => USD
+				
+				montantc = 1.27116 * montanta;
+				System.out.println();
+				System.out.println(montanta+" livre britannique correspond à "+montantc+" dollar américain");
+				break;
+				
+			case 6 : //USD => GBP
+			
+				montantc = 0.786685 * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar américain correspond à "+montantc+" livre britannique");
+				break;
+				
+			case 7 : //EUR => CAD
+			
+				montantc = 1.49310 * montanta;
+				System.out.println();
+				System.out.println(montanta+" euro correspond à "+montantc+" dollar canadien");
+				break;
+			
+			case 8 : //USD => CAD
+				
+				montantc = 1.31310 * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar américain correspond à "+montantc+" dollar canadien");
+				break;
+			
+			case 9 : //GBP => CAD
+				
+				montantc = 1.66832 * montanta;
+				System.out.println();
+				System.out.println(montanta+" livre britannique correspond à "+montantc+" dollar canadien");
+				break;
+			
+			case 10 : //CAD => EUR
+				
+				montantc = 0.669748 * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar canadien correspond à "+montantc+" euro");
+				break;
+			
+			case 11 : //CAD => USD
+				
+				montantc =  0.761557 * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar canadien correspond à "+montantc+" dollar américain");
+				break;
+			
+			case 12 : //CAD => GBP
+				
+				montantc = 0.599436 * montanta;
+				System.out.println();
+				System.out.println(montanta+" euro correspond à "+montantc+" livre britannique");
+				break;
+				
+			case 13 : //AUD => EUR
+			
+				montantc = 0.615470  * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar autralien correspond à "+montantc+" euro");
+				break;
+			
+			case 14 : //AUD => USD
+				
+				montantc = 0.699554  * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar autralien correspond à "+montantc+" dollar américain");
+				break;
+			
+			case 15 : //AUD => CAD
+				
+				montantc = 0.918235 * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar autralien correspond à "+montantc+" dollar canadien");
+				break;
+				
+			case 16 : //AUD => GBP
+				
+				montantc = 0.550730 * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar autralien correspond à "+montantc+" livre britannique");
+				break;
+
+
+			case 17 : //EUR => AUD
+				
+				montantc = 1.62478 * montanta;
+				System.out.println();
+				System.out.println(montanta+" euro correspond à "+montantc+" dollar australien");
+				break;
+				
+			case 18 : //GBP => AUD
+				
+				montantc = 1.81577 * montanta;
+				System.out.println();
+				System.out.println(montanta+" livre britannique correspond à "+montantc+" dollar australien");
+				break;
+				
+			case 19 : //USD => AUD
+				
+				montantc = 1.42948 * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar américain correspond à "+montantc+" dollar australien");
+				break;
+				
+
+			case 20 : //CAD => AUD
+				
+				montantc = 1.08905 * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar canadien correspond à "+montantc+" dollar australien");
+				break;
+				
+			case 21 : //JPY => EUR
+				
+				montantc = 0.00815827 * montanta;
+				System.out.println();
+				System.out.println(montanta+" yen japonais correspond à "+montantc+" euro");
+				break;
+			
+			case 22 : //JPY => USD
+				
+				montantc =  0.00927323 * montanta;
+				System.out.println();
+				System.out.println(montanta+" yen japonais correspond à "+montantc+" dollar américain");
+				break;
+			
+			case 23 : //JPY => CAD
+				
+				montantc = 0.0121571 * montanta;
+				System.out.println();
+				System.out.println(montanta+" yen japonais correspond à "+montantc+" dollar canadien");
+				break;
+				
+			case 24 : //JPY => GBP
+				
+				montantc = 0.00730883 * montanta;
+				System.out.println();
+				System.out.println(montanta+" yen japonais correspond à "+montantc+" livre britannique");
+				break;
+
+			case 25 : //JPY => AUD
+				
+				montantc = 0.0132498 * montanta;
+				System.out.println();
+				System.out.println(montanta+" yen japonais correspond à "+montantc+" dollar australien");
+				break;
+
+			case 26 : //EUR => JPY
+				
+				montantc = 122.575  * montanta;
+				System.out.println();
+				System.out.println(montanta+" euro correspond à "+montantc+" yen japonais");
+				break;
+				
+			case 27 : //GBP => JPY
+				
+				montantc = 136.821 * montanta;
+				System.out.println();
+				System.out.println(montanta+" livre britannique correspond à "+montantc+" yen japonais");
+				break;
+				
+			case 28 : //USD => JPY
+				
+				montantc = 107.837 * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar américain correspond à "+montantc+" yen japonais");
+				break;
+				
+
+			case 29 : //CAD => JPY
+				
+				montantc = 82.2564 * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar canadien correspond à "+montantc+" yen japonais");
+				break;
+		
+			case 30 : //AUD => JPY
+				
+				montantc = 75.4730 * montanta;
+				System.out.println();
+				System.out.println(montanta+" dollar australien correspond à "+montantc+" yen japonais");
+				break;
+			
+			
+		}
+		
+		System.out.println();
+		System.out.println("AU REVOIR !");
+		
+		}
+	}
+}
