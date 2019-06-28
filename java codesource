@@ -12,7 +12,7 @@ public class Conversion2 {
 		int choix, mode;
 		Scanner sc=new Scanner(System.in);
 		System.out.println("OUTIL DE CONVERSION DE DISTANCES, DE MASSES ET DE DEVISES");
-		System.out.println("-------------------------------------");
+		System.out.println("----------------------------------------------------------");
 		System.out.println("voulez-vous convertir une masse, une distance ou une devise ?");
 		System.out.println();
 		do {
