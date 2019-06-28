@@ -28,6 +28,7 @@ public class Conversion2 {
 		}while(choix != 1 && choix != 2 && choix !=3);
 		if(choix == 1 ) {
 			System.out.println("CHOISISEZ LE MODE DE CONVERSION DE LA MASSE :");
+			System.out.println("----------------------------------------------");
 			System.out.println("1 - KILOGRAMME => GRAMME");
 			System.out.println("2 - GRAMME => KILOGRAMME");
 			System.out.println("3 - KILOGRAMME => MILLIGRAMME");
@@ -249,7 +250,8 @@ public class Conversion2 {
 		
 		
 		else if(choix == 2 ) {
-			System.out.println("CHOISISEZ LE MODE DE CONVERSION DE LA MASSE :");
+			System.out.println("CHOISISEZ LE MODE DE CONVERSION DE LA DISTANCE :");
+			System.out.println("------------------------------------------------");
 			System.out.println("1 - KILOMETRE => METRE");
 			System.out.println("2 - METRE => KILOMETRE");
 			System.out.println("3 - KILOMETRE => MILLIMETRE");
@@ -473,8 +475,8 @@ public class Conversion2 {
 		else if(choix == 3) {
 			
 			
-			System.out.println("OUTIL DE CONVERSSION DE DEVISES :");
-			System.out.println("----------------------------------");
+			System.out.println("CHOISISSEZ LE MODE DE CONVERSSION DE DEVISES :");
+			System.out.println("-----------------------------------------------");
 			System.out.println("choisissez le mode de conversion que vous souhaitez :");
 			System.out.println();
 			System.out.println("1 - EURO (EUR) => DOLLAR AMERICAIN (USD) ");
@@ -758,12 +760,13 @@ public class Conversion2 {
 				System.out.println(montanta+" dollar australien correspond à "+montantc+" yen japonais");
 				break;
 			
-			
+			}
 		}
 		
 		System.out.println();
+		System.out.println();
 		System.out.println("AU REVOIR !");
+		System.out.println("--------------------------------------------------------------------------------");
 		
-		}
 	}
 }
